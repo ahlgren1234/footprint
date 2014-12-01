@@ -10,32 +10,54 @@
 
 	<!-- Stylesheets -->
 	<link rel="stylesheet" href="css/styles.css" />
+	<link rel="stylesheet" href="css/prism.css">
 
 	<!-- Add Bower Components -->
 	<link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.min.css">
 	<link rel="stylesheet" href="bower_components/animate.css/animate.min.css">
 
+	<!-- Presentation Only Styles -->
+	<link rel="stylesheet" href="presentation/css/presentation.css">
+
 	<style>
-		.demo-col {
-			background-color: #def0fa;
-			text-align: center;
-			padding: 1em 0;
-			display: block;
-
-			border-radius: 3px;
-		}
-
-		.row {
-			margin-bottom: 2em;
-		}
+		
 	</style>
 </head>
 <body>
 
+	<!-- Presentation Widget -->
+	<div class="pres-widget">
+		<p><strong>Jump to:</strong></p>
+
+		<ul>
+			<li><a href="#top">Top</a></li>
+			<li><a href="#nav-grid">The Grid System</a></li>
+			<li><a href="#nav-typography">Typography</a></li>
+			<li><a href="#nav-buttons">Buttons</a></li>
+			<li><a href="#nav-forms">Forms</a></li>
+			<li><a href="#nav-icons">Icons</a></li>
+			<li><a href="#nav-feedback">Feedback</a></li>
+			<li><a href="#nav-navigation">Navigation</a></li>
+			<li><a href="#nav-animations">Animations</a></li>
+			<li><a href="#nav-tabs">Tabs</a></li>
+			<li><a href="#nav-accordions">Accordions</a></li>
+			<li><a href="#nav-carousels">Carousels</a></li>
+		</ul>
+	</div> <!-- .pres-widget -->
+
+
+	<!-- Presentation Header -->
+	<div class="container" id="top">
+		<header class="pres-header">
+			<h3>Footprint Pattern Library</h3>
+			<p>A Front-end pattern library for webdesigners made by Peter Ahlgren. Orinated from a course by Adi Purdila at Tuts+.</p>
+		</header>
+	</div> <!-- .container -->
+
 	<!-- The Grid System -->
 	<section>
 		<div class="container">
-			<h1>The Grid System</h1>
+			<h1 id="nav-grid">The Grid System</h1>
 			<hr>
 			
 			<div class="row">
@@ -155,6 +177,28 @@
 				</div> <!-- .col-half -->
 			</div> <!-- .row -->
 
+			<hr>
+			<div class="row">
+				<div class="col-4">
+					<h5>Notes</h5>
+					<p>Here's a few code snippets that will explain how the grid works.</p>
+				</div> <!-- .col-4 -->
+				<div class="col-8">
+					<pre class="line-numbers"><code class="language-markup">
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-quarter&quot;&gt;
+		&lt;div class=&quot;demo-col&quot;&gt;.col-quarter&lt;/div&gt;
+	&lt;/div&gt; &lt;!-- .col-quarter --&gt;
+	&lt;div class=&quot;col-quarter&quot;&gt;
+		&lt;div class=&quot;demo-col&quot;&gt;.col-quarter&lt;/div&gt;
+	&lt;/div&gt; &lt;!-- .col-quarter --&gt;
+	&lt;div class=&quot;col-half&quot;&gt;
+		&lt;div class=&quot;demo-col&quot;&gt;.col-half&lt;/div&gt;
+	&lt;/div&gt; &lt;!-- .col-half --&gt;
+&lt;/div&gt; &lt;!-- .row --&gt;
+					</code></pre>
+				</div> <!-- .col-8 -->
+			</div> <!-- .row -->
 
 		</div> <!-- .container -->
 	</section>
@@ -163,7 +207,7 @@
 	<!-- Typography -->
 	<section>
 		<div class="container">
-			<h1>Typography</h1>
+			<h1 id="nav-typography">Typography</h1>
 			<hr>
 
 			<div class="row">
@@ -181,11 +225,11 @@
 					<p>Proin ac dui non augue tincidunt aliquet eu a diam. Sed eu risus imperdiet, varius eros at, congue augue. <strong>Nam viverra lacinia quam,</strong> a ullamcorper mauris tempus sit amet. <em>Phasellus elementum,</em> ante ut efficitur suscipit, neque odio accumsan massa, eu rutrum magna ex in neque. Suspendisse non nunc ante. Nulla interdum, arcu a ullamcorper rutrum, felis eros ullamcorper neque, <strike>ut accumsan ipsum lacus nec metus.</strike> Proin interdum ipsum nisi, vitae posuere nibh feugiat id.
 					</p>
 
-					<pre><code>.row:after {
-content: "";
+					<pre class="line-numbers"><code class="language-css">.row:after {
+	content: "";
 
-display: table;
-clear: both;
+	display: table;
+	clear: both;
 }</code></pre>
 					
 				</div> <!-- .col-half -->
@@ -227,7 +271,7 @@ clear: both;
 	<!-- Buttons -->
 	<section>
 		<div class="container">
-			<h1>Buttons</h1>
+			<h1 id="nav-buttons">Buttons</h1>
 			<hr>
 
 			<div class="row">
@@ -273,7 +317,7 @@ clear: both;
 	<!-- Forms -->
 	<section>
 		<div class="container">
-			<h1>Forms</h1>
+			<h1 id="nav-forms">Forms</h1>
 			<hr>
 
 			<form action="">
@@ -434,7 +478,7 @@ clear: both;
 	<!-- Icons -->
 	<section>
 		<div class="container">
-			<h1>Icons</h1>
+			<h1 id="nav-icons">Icons</h1>
 			<hr>
 
 			<div class="row">
@@ -485,7 +529,7 @@ clear: both;
 	<!-- Feedback -->
 	<section>
 		<div class="container">
-			<h1>Feedback</h1>
+			<h1 id="nav-feedback">Feedback</h1>
 			<hr>
 
 			<div class="row">
@@ -522,7 +566,7 @@ clear: both;
 	<!-- Navigation -->
 	<section>
 		<div class="container">
-			<h1>Navigation</h1>
+			<h1 id="nav-navigation">Navigation</h1>
 			<hr>
 
 			<div class="row navbar-container">
@@ -560,7 +604,7 @@ clear: both;
 	<!-- Animations -->
 	<section>
 		<div class="container">
-			<h1>Animations</h1>
+			<h1 id="nav-animations">Animations</h1>
 			<hr>
 
 			<div class="row" id="demo-animations">
@@ -593,7 +637,7 @@ clear: both;
 	<!-- Tabs -->
 	<section>
 		<div class="container">
-			<h1>Tabs</h1>
+			<h1 id="nav-tabs">Tabs</h1>
 			<hr>
 
 			<div class="tabs">
@@ -622,7 +666,7 @@ clear: both;
 	<!-- Accordions -->
 	<section>
 		<div class="container">
-			<h1>Accordions</h1>
+			<h1 id="nav-accordions">Accordions</h1>
 			<hr>
 
 			<div class="accordion">
@@ -659,7 +703,7 @@ clear: both;
 	<!-- Carousels -->
 	<div class="section">
 		<div class="container">
-			<h1>Carousels</h1>
+			<h1 id="nav-carousels">Carousels</h1>
 			<hr>
 
 			<div class="cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-timeout="3000" data-cycle-caption-template="Slide no. {{slideNum}} of {{slideCount}} - {{cycleTitle}}">
@@ -689,6 +733,7 @@ clear: both;
 	<script src="bower_components/superfish/dist/js/superfish.min.js"></script>
 	<script src="bower_components/superfish/dist/js/hoverIntent.js"></script>
 	<script src="bower_components/jquery-cycle2/build/jquery.cycle2.min.js"></script>
+	<script src="js/prism.js"></script>
 	<script src="js/scripts.js"></script>
 
 </body>
