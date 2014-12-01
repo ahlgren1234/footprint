@@ -687,12 +687,243 @@ form input[type="radio"]:checked + label:before {
   font-size: 250%; }
 
 /* Feedback */
+[class^="alert-"] {
+  border: 1px solid;
+  border-bottom-width: 3px;
+  margin: 1.5em 0;
+  padding: 1.5em; }
+  [class^="alert-"] p {
+    margin-bottom: 0; }
+
+.alert-information {
+  border-color: #bddcee;
+  background-color: #fafcfe; }
+  .alert-information :first-child {
+    color: #439ccf; }
+
+.alert-error {
+  border-color: #f6a79f;
+  background-color: #fde7e5; }
+  .alert-error :first-child {
+    color: #e72915; }
+
+.alert-warning {
+  border-color: #ffa76d;
+  background-color: #ffd5ba; }
+  .alert-warning :first-child {
+    color: #d35400; }
+
+.alert-success {
+  border-color: #bedf91;
+  background-color: #e1f0cc; }
+  .alert-success :first-child {
+    color: #74a730; }
+
 /**
  * ---------------------------------------------------------
  * 2.0 Advanced Patterns.
  * ---------------------------------------------------------
  */
 /* Navigation */
+.navbar-container #rwd-trigger {
+  display: none; }
+.navbar-container .sf-menu {
+  float: right; }
+.navbar-container .rwd-menu {
+  display: none; }
+  .navbar-container .rwd-menu a {
+    display: block;
+    padding: .75em 1.5em;
+    font-weight: bold;
+    text-decoration: none; }
+    .navbar-container .rwd-menu a:active {
+      background-color: #dde2d4; }
+  .navbar-container .rwd-menu ul {
+    list-style-type: none;
+    margin-bottom: 0; }
+@media (max-width: 768px) {
+  .navbar-container .logo img,
+  .navbar-container #rwd-trigger {
+    display: block;
+    margin: 0 auto 1.5em auto; }
+  .navbar-container .sf-menu {
+    display: none; } }
+
+/* Superfish Essential Styles. */
+.sf-menu,
+.sf-menu * {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.sf-menu li {
+  position: relative; }
+.sf-menu > li {
+  float: left; }
+.sf-menu ul {
+  position: absolute;
+  display: none;
+  top: 100%;
+  left: 0;
+  z-index: 99; }
+.sf-menu li:hover > ul,
+.sf-menu li.sfHover > ul {
+  display: block; }
+.sf-menu a {
+  display: block;
+  position: relative; }
+.sf-menu ul ul {
+  top: 0;
+  left: 100%; }
+
+/* Superfish Menu Skin. */
+.sf-menu ul {
+  min-width: 12em;
+  /* allow long menu items to determine submenu width */ }
+.sf-menu a {
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  padding: .75em 1.5em;
+  color: #333;
+  text-decoration: none; }
+.sf-menu li {
+  white-space: nowrap;
+  /* no need for Supersubs plugin */
+  -webkit-transition: background .2s;
+  transition: background .2s; }
+.sf-menu ul li {
+  background-color: #dde2e4; }
+.sf-menu ul ul li {
+  background-color: #c1cacd; }
+.sf-menu li:hover,
+.sf-menu li.sfHover {
+  background: #c1cacd;
+  /* only transition out, not in */
+  -webkit-transition: none;
+  transition: none; }
+
+/*** arrows (for all except IE7) **/
+.sf-arrows .sf-with-ul {
+  padding-right: 2.5em; }
+
+/* styling for both css and generated arrows */
+.sf-arrows .sf-with-ul:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 1em;
+  margin-top: -3px;
+  height: 0;
+  width: 0;
+  /* order of following 3 rules important for fallbacks to work */
+  border: 5px solid transparent;
+  border-top-color: #333; }
+
+.sf-arrows > li > .sf-with-ul:focus:after,
+.sf-arrows > li:hover > .sf-with-ul:after,
+.sf-arrows > .sfHover > .sf-with-ul:after {
+  border-top-color: #333; }
+
+/* styling for right-facing arrows */
+.sf-arrows ul .sf-with-ul:after {
+  margin-top: -5px;
+  margin-right: -3px;
+  border-color: transparent;
+  border-left-color: #333; }
+
+.sf-arrows ul li > .sf-with-ul:focus:after,
+.sf-arrows ul li:hover > .sf-with-ul:after,
+.sf-arrows ul .sfHover > .sf-with-ul:after {
+  border-left-color: #333; }
+
 /* Tabs */
+.tabs-links {
+  margin: 0; }
+  .tabs-links:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .tabs-links li {
+    float: left;
+    list-style-type: none;
+    margin-right: 1px; }
+    .tabs-links li:first-child {
+      margin-left: .5em; }
+    .tabs-links li a {
+      background-color: #ebeeef;
+      display: inline-block;
+      padding: 1em 1.5em;
+      color: gray;
+      text-decoration: none; }
+      .tabs-links li a:hover {
+        background-color: #c1cacd;
+        color: #333; }
+    .tabs-links li.active a, .tabs-links li.active a:hover {
+      border: 1px solid #ccc;
+      border-bottom: 0;
+      background-color: #fff;
+      color: #333;
+      font-weight: bold;
+      margin-bottom: -1px; }
+
+.tabs-content {
+  border: 1px solid #ccc;
+  background-color: #fff;
+  padding: 1.5em; }
+  .tabs-content p:last-child {
+    margin-bottom: 0; }
+
+.tab {
+  display: none; }
+  .tab:active {
+    display: block; }
+
 /* Accordions */
+.accordion {
+  border: 1px solid #ccc; }
+
+.accordion-element-title {
+  border-bottom: 1px solid #ccc;
+  background-color: #ebeeef;
+  color: gray;
+  text-decoration: none;
+  display: block;
+  padding: 1.5em; }
+  .accordion-element-title:hover, .accordion-element-title:active {
+    color: #fff;
+    background-color: #333; }
+  .accordion-element:last-child .accordion-element-title {
+    border-bottom: 0; }
+
+.accordion-element-content {
+  display: none;
+  padding: 1.5em; }
+  .accordion-element-content p:last-child {
+    margin-bottom: 0; }
+
 /* Carousels */
+.cycle-slideshow {
+  position: relative; }
+  .cycle-slideshow .cycle-prev,
+  .cycle-slideshow .cycle-next {
+    background-color: rgba(255, 255, 255, 0.5);
+    display: inline-block;
+    height: 3em;
+    margin-top: -1.5em;
+    position: absolute;
+    width: 3em;
+    z-index: 1000;
+    top: 50%;
+    text-align: center;
+    font-size: 1.5em;
+    line-height: 3em;
+    cursor: pointer; }
+    .cycle-slideshow .cycle-prev:hover,
+    .cycle-slideshow .cycle-next:hover {
+      background-color: rgba(255, 255, 255, 0.9); }
+  .cycle-slideshow .cycle-next {
+    right: 0; }
+  .cycle-slideshow .cycle-prev {
+    left: 0; }
+  .cycle-slideshow .cycle-caption {
+    margin: 1.5em 0;
+    text-align: center; }

@@ -39,3 +39,25 @@ $field-required-color: red;
 // Icon Variables.
 $icon-roundness: 3px;
 $icon-border-color: #ccc;
+
+// Feedback Variables.
+$information-color: #439ccf;
+$error-color: #e72915;
+$warning-color: #d35400;
+$success-color: #74a730;
+
+// Navigation Variables.
+$navbar-link-color: $text-color;
+$navbar-submenu-bg: #dde2e4;
+
+// Tabs Variables.
+$tabs-border-color: #ccc;
+$tabs-inactive-bg-color: #c1cacd;
+$tabs-active-bg-color: #fff;
+
+// Accordion Variables.
+$accordion-border-color: #ccc;
+$accordion-inactive-bg-color: #c1cacd;
+$accordion-active-bg-color: #333;
+$accordion-active-text-color: #fff;
+
